@@ -1,0 +1,544 @@
+<html ng-app="starApp">
+     <head>
+          <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+          <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+          <link href="style/style.css" rel="stylesheet" type="text/css">
+     </head>
+     <body>
+         
+         
+         <!--<div class="info">
+           <div class="row">
+               <div class="col-md-3">
+                   <h2><i class="fa fa-folm"></i>film name</h2>
+               </div>
+               <div class="col-md-3">
+                   <h2><i class="fa fa-"> point 90</i></h2>
+               </div>
+               <div class="col-md-3">
+                   <h2></h2>
+               </div>
+           </div>
+         </div>-->
+         
+         <div class="select">
+             <div class="row">
+                 <div class="col-md-4">
+                     <img ng-src="{{myfilms.imgsrc}}" class="img-responsive">
+                 </div>
+                 <div class="col-md-8">
+                     <h3><strong>Movie : {{myfilms.name}} </strong></h3>
+                     <h3><strong>Location : City Center Cinema </strong></h3>
+                     <br>
+                     <br>
+                     <h3><strong>please choose the time : </strong></h3>
+                     <select>
+                          <option ng-repeat="n1 in myfilms.times1">{{n1}}</option>
+                     </select>
+                 </div>
+             </div>
+             
+             <br>
+             <br>
+             <br>
+             <br>
+             <div class="cinema">
+                 <center>
+                 <h3>PLEASE SELECT YOUR SEATS</h3>
+                     <div class="choose">
+                         <h4><span class="unavaliable"></span><strong>unaviliable</strong></h4>
+                         <h4><span class="avaliable"></span><strong>avaliable</strong></h4>
+                         <h4><span class="seat"></span><strong>your seat</strong></h4>
+                     </div>
+                 </center>
+                 <br>
+                 <div class="screen"><h2>Screen</h2></div>
+                 <br>
+                 <table class="table table-responsive">
+                      <tr>
+                         <td class="none">A</td>
+                         <td class="select">18</td>
+                         <td style="border:none" class="none"></td>
+                         <td style="border:none" class="none"></td>
+                         <td>03</td>
+                         <td>04</td>
+                         <td>05</td>
+                         <td>06</td>
+                         <td style="border:none" class="none"></td>
+                         <td>07</td>
+                         <td>08</td>
+                         <td>09</td>
+                         <td>10</td>
+                         <td>11</td>
+                         <td>13</td>
+                         <td>14</td>
+                         <td>15</td>
+                         <td>16</td>
+                         <td>17</td>
+                        <td style="border:none" class="none"></td>
+                         <td>18</td>
+                         <td>20</td>
+                         <td>21</td>
+                         <td style="border:none" class="none"></td>
+                         <td style="border:none" class="none"></td>
+                         <td class="none">A</td>
+                      </tr>
+                     
+                     <tr>
+                         <td class="none">B</td>
+                         <td>01</td>
+                         <td>02</td>
+                         <td>03</td>
+                         <td>04</td>
+                         <td>05</td>
+                         <td>06</td>
+                         <td style="border:none" class="none"></td>
+                         <td class="select">07</td>
+                         <td>08</td>
+                         <td class="select">09</td>
+                         <td>10</td>
+                         <td>11</td>
+                         <td>13</td>
+                         <td>14</td>
+                         <td>15</td>
+                         <td>16</td>
+                         <td style="border:none" class="none"></td>
+                         <td style="border:none" class="none"></td>
+                         <td class="select">17</td>
+                         <td>18</td>
+                         <td>19</td>
+                         <td class="select">20</td>
+                         <td class="select">21</td>
+                         <td>22</td>
+                         <td class="none">B</td>
+                      </tr>
+                     
+                     <tr>
+                         <td class="none">C</td>
+                         <td class="select">01</td>
+                         <td>02</td>
+                         <td>03</td>
+                         <td>04</td>
+                         <td>05</td>
+                         <td>06</td>
+                         <td style="border:none" class="none"></td>
+                         <td>07</td>
+                         <td>08</td>
+                         <td>09</td>
+                         <td class="select">10</td>
+                         <td class="select">11</td>
+                         <td>13</td>
+                         <td>14</td>
+                         <td>15</td>
+                         <td>16</td>
+                         <td class="select">17</td>
+                         <td style="border:none" class="none"></td>
+                         <td>18</td>
+                         <td>19</td>
+                         <td>20</td>
+                         <td>21</td>
+                         <td>22</td>
+                         <td>23</td>
+                         <td class="none">C</td>
+                      </tr>
+                     
+                     <tr>
+                         <td class="none">D</td>
+                         <td>01</td>
+                         <td class="select">02</td>
+                         <td>03</td>
+                         <td>04</td>
+                         <td>05</td>
+                         <td>06</td>
+                         <td style="border:none" class="none"></td>
+                         <td>07</td>
+                         <td class="select">08</td>
+                         <td class="select">09</td>
+                         <td class="select">10</td>
+                         <td>11</td>
+                         <td>13</td>
+                         <td>14</td>
+                         <td>15</td>
+                         <td>16</td>
+                         <td style="border:none" class="none"></td>
+                         <td style="border:none" class="none"></td>
+                         <td class="select">17</td>
+                         <td>18</td>
+                         <td>19</td>
+                         <td class="select">20</td>
+                         <td>21</td>
+                         <td>22</td>
+                         <td class="none">D</td>
+                      </tr>
+                     
+                     <tr>
+                         <td class="none">E</td>
+                         <td>01</td>
+                         <td class="select">02</td>
+                         <td>03</td>
+                         <td>04</td>
+                         <td>05</td>
+                         <td>06</td>
+                         <td style="border:none" class="none"></td>
+                         <td>07</td>
+                         <td>08</td>
+                         <td>09</td>
+                         <td class="select">10</td>
+                         <td class="select">11</td>
+                         <td>13</td>
+                         <td>14</td>
+                         <td>15</td>
+                         <td>16</td>
+                         <td class="select">17</td>
+                         <td style="border:none" class="none"></td>
+                         <td class="select">18</td>
+                         <td>19</td>
+                         <td>20</td>
+                         <td>21</td>
+                         <td class="select">22</td>
+                         <td class="select">23</td>
+                         <td class="none">E</td>
+                      </tr>
+                     
+                     <tr>
+                         <td class="none">F</td>
+                         <td class="select">01</td>
+                         <td class="select">02</td>
+                         <td class="select">03</td>
+                         <td>04</td>
+                         <td>05</td>
+                         <td>06</td>
+                         <td style="border:none" class="none"></td>
+                         <td>07</td>
+                         <td>08</td>
+                         <td>09</td>
+                         <td>10</td>
+                         <td>11</td>
+                         <td class="select">13</td>
+                         <td class="select">14</td>
+                         <td>15</td>
+                         <td>16</td>
+                         <td style="border:none" class="none"></td>
+                         <td style="border:none" class="none"></td>
+                         <td class="select">17</td>
+                         <td>18</td>
+                         <td>19</td>
+                         <td class="select">20</td>
+                         <td class="select">21</td>
+                         <td>22</td>
+                         <td class="none">F</td>
+                      </tr>
+                     
+                     <tr>
+                         <td class="none">G</td>
+                         <td>01</td>
+                         <td>02</td>
+                         <td>03</td>
+                         <td>04</td>
+                         <td>05</td>
+                         <td>06</td>
+                         <td style="border:none" class="none"></td>
+                         <td>07</td>
+                         <td class="select">08</td>
+                         <td class="select">09</td>
+                         <td>10</td>
+                         <td>11</td>
+                         <td>13</td>
+                         <td>14</td>
+                         <td>15</td>
+                         <td>16</td>
+                         <td class="select">17</td>
+                         <td style="border:none" class="none"></td>
+                         <td class="select">18</td>
+                         <td>19</td>
+                         <td>20</td>
+                         <td class="select">21</td>
+                         <td>22</td>
+                         <td>23</td>
+                         <td class="none">G</td>
+                      </tr>
+                     
+                     <tr>
+                         <td class="none">H</td>
+                         <td class="select">01</td>
+                         <td>02</td>
+                         <td>03</td>
+                         <td>04</td>
+                         <td>05</td>
+                         <td>06</td>
+                         <td style="border:none" class="none"></td>
+                         <td>07</td>
+                         <td>08</td>
+                         <td>09</td>
+                         <td>10</td>
+                         <td>11</td>
+                         <td>13</td>
+                         <td>14</td>
+                         <td>15</td>
+                         <td>16</td>
+                         <td style="border:none" class="none"></td>
+                         <td style="border:none" class="none"></td>
+                         <td class="select">17</td>
+                         <td>18</td>
+                         <td>19</td>
+                         <td class="select">20</td>
+                         <td>21</td>
+                         <td>22</td>
+                         <td class="none">H</td>
+                      </tr>
+                     
+                     <tr>
+                         <td class="none">I</td>
+                         <td>01</td>
+                         <td>02</td>
+                         <td>03</td>
+                         <td>04</td>
+                         <td>05</td>
+                         <td>06</td>
+                         <td style="border:none" class="none"></td>
+                         <td>07</td>
+                         <td>08</td>
+                         <td>09</td>
+                         <td>10</td>
+                         <td>11</td>
+                         <td>13</td>
+                         <td>14</td>
+                         <td>15</td>
+                         <td>16</td>
+                         <td class="select">17</td>
+                         <td style="border:none" class="none"></td>
+                         <td>18</td>
+                         <td>19</td>
+                         <td>20</td>
+                         <td class="select">21</td>
+                         <td>22</td>
+                         <td>23</td>
+                         <td class="none">I</td>
+                      </tr>
+                     
+                     <tr>
+                         <td class="none">J</td>
+                         <td>01</td>
+                         <td>02</td>
+                         <td>03</td>
+                         <td>04</td>
+                         <td>05</td>
+                         <td>06</td>
+                         <td style="border:none" class="none"></td>
+                         <td>07</td>
+                         <td>08</td>
+                         <td>09</td>
+                         <td>10</td>
+                         <td>11</td>
+                         <td>13</td>
+                         <td>14</td>
+                         <td>15</td>
+                         <td>16</td>
+                         <td style="border:none" class="none"></td>
+                         <td style="border:none" class="none"></td>
+                         <td class="select">17</td>
+                         <td>18</td>
+                         <td>19</td>
+                         <td class="select">20</td>
+                         <td>21</td>
+                         <td>22</td>
+                         <td class="none">J</td>
+                      </tr>
+                     
+                     <tr>
+                         <td class="none">K</td>
+                         <td class="select">01</td>
+                         <td class="select">02</td>
+                         <td class="select">03</td>
+                         <td class="select">04</td>
+                         <td class="select">05</td>
+                         <td class="select">06</td>
+                         <td style="border:none" class="none"></td>
+                         <td class="select">07</td>
+                         <td class="select">08</td>
+                         <td class="select">09</td>
+                         <td class="select">10</td>
+                         <td class="select">11</td>
+                         <td class="select">13</td>
+                         <td class="select">14</td>
+                         <td class="select">15</td>
+                         <td>16</td>
+                         <td class="select">17</td>
+                         <td style="border:none" class="none"></td>
+                         <td class="select">18</td>
+                         <td>19</td>
+                         <td>20</td>
+                         <td class="select">21</td>
+                         <td>22</td>
+                         <td>23</td>
+                         <td class="none">K</td>
+                      </tr>
+                     
+                     
+                     <tr>
+                         <td class="none">L</td>
+                        <td class="select">01</td>
+                        <td class="select">02</td>
+                        <td class="select">03</td>
+                        <td class="select">04</td>
+                        <td class="select">05</td>
+                        <td class="select">06</td>
+                        <td class="select">07</td>
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td class="select">08</td>
+                        <td class="select">09</td>
+                        <td class="select">10</td>
+                        <td class="select">11</td>
+                        <td class="select">12</td>
+                        <td class="select">13</td>
+                        <td class="select">14</td>
+                        <td class="none">L</td>
+                     </tr>
+                     
+                     
+                     <tr>
+                         <td class="none">M</td>
+                        <td class="select">01</td>
+                        <td class="select">02</td>
+                        <td class="select">03</td>
+                        <td class="select">04</td>
+                        <td class="select">05</td>
+                        <td class="select">06</td>
+                        <td class="select">07</td>
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td class="select">08</td>
+                        <td class="select">09</td>
+                        <td class="select">10</td>
+                        <td class="select">11</td>
+                        <td class="select">12</td>
+                        <td class="select">13</td>
+                        <td class="select">14</td>
+                        <td class="none">M</td>
+                     </tr>
+                     
+                     
+                     <tr>
+                         <td class="none">N</td>
+                        <td class="select">01</td>
+                        <td class="select">02</td>
+                        <td class="select">03</td>
+                        <td class="select">04</td>
+                        <td class="select">05</td>
+                        <td class="select">06</td>
+                        <td class="select">07</td>
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td class="select">08</td>
+                        <td class="select">09</td>
+                        <td class="select">10</td>
+                        <td class="select">11</td>
+                        <td class="select">12</td>
+                        <td class="select">13</td>
+                        <td class="select">14</td>
+                        <td class="none">N</td>
+                     </tr>
+                     
+                     
+                     <tr>
+                         <td class="none">O</td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td>04</td>
+                        <td>05</td>
+                        <td>06</td>
+                        <td>07</td>
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td>08</td>
+                        <td>09</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td class="none">O</td>
+                     </tr>
+                     
+                     
+                     <tr>
+                         <td class="none">P</td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td>04</td>
+                        <td>05</td>
+                        <td>06</td>
+                        <td>07</td>
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td style="border:none" class="none"></td> 
+                        <td>08</td>
+                        <td>09</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td class="none">P</td>
+                     </tr>
+                 </table>
+             </div>
+             <br>
+             <br>
+             <br>
+             <br>
+                     <div class="b1">
+                         <a href="#!/regestration"><button class="btn1">Next</button></a>
+                     </div>
+         </div>
+         
+         <script src="js/bootstrap.min.js"></script>
+         <script src="jquery/jquery-3.2.1.js"></script>
+         <script src="angular/angular.min.js"></script>
+         <script src="angular/angular-route.js"></script>
+         <script src="jquery/plugins.js"></script>
+         <script src="angular/ang.js"></script>
+    </body>
+</html>

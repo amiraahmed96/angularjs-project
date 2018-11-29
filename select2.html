@@ -1,0 +1,317 @@
+<html ng-app="starApp">
+     <head>
+          <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+          <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+          <link href="style/style.css" rel="stylesheet" type="text/css">
+     </head>
+     <body>
+         
+         
+         <!--<div class="info">
+           <div class="row">
+               <div class="col-md-3">
+                   <h2><i class="fa fa-folm"></i>film name</h2>
+               </div>
+               <div class="col-md-3">
+                   <h2><i class="fa fa-"> point 90</i></h2>
+               </div>
+               <div class="col-md-3">
+                   <h2></h2>
+               </div>
+           </div>
+         </div>-->
+         
+         <div class="select">
+             <div class="row">
+                 <div class="col-md-4">
+                     <img ng-src="{{myfilms.imgsrc}}" class="img-responsive">
+                 </div>
+                 <div class="col-md-8">
+                     <h3><strong>Movie : {{myfilms.name}} </strong></h3>
+                     <h3><strong>Location : Hilton Ramses Cinema </strong></h3>
+                     <br>
+                     <br>
+                     <h3><strong>please choose the time : </strong></h3>
+                     <select>
+                          <option ng-repeat="n2 in myfilms.times2">{{n2}}</option>
+                     </select>
+                 </div>
+             </div>
+             
+             <br>
+             <br>
+             <br>
+             <br>
+             <div class="cinema">
+                 <center>
+                 <h3>PLEASE SELECT YOUR SEATS</h3>
+                     <div class="choose">
+                         <h4><span class="unavaliable"></span><strong>unaviliable</strong></h4>
+                         <h4><span class="avaliable"></span><strong>avaliable</strong></h4>
+                         <h4><span class="seat"></span><strong>your seat</strong></h4>
+                     </div>
+                 </center>
+                 <br>
+                 <div class="screen"><h2>Screen</h2></div>
+                 <br>
+                 <table class="table table-responsive">
+                      <tr>
+                         <td class="none">A</td>
+                         <td>18</td>
+                         <td>16</td>
+                         <td>14</td>
+                         <td>12</td>
+                         <td>10</td>
+                         <td>08</td>
+                         <td>06</td>
+                         <td>04</td>
+                         <td>02</td>
+                         <td style="border:none" class="none"></td>
+                         <td>01</td>
+                         <td>03</td>
+                         <td>05</td>
+                         <td>07</td>
+                         <td>09</td>
+                         <td>11</td>
+                         <td>13</td>
+                         <td>15</td>
+                         <td>17</td>
+                         <td class="none">A</td>
+                      </tr>
+                     
+                     <tr>
+                         <td class="none">B</td>
+                         <td>18</td>
+                         <td>16</td>
+                         <td>14</td>
+                         <td>12</td>
+                         <td>10</td>
+                         <td>08</td>
+                         <td>06</td>
+                         <td>04</td>
+                         <td>02</td>
+                         <td style="border:none" class="none"></td>
+                         <td>01</td>
+                         <td>03</td>
+                         <td>05</td>
+                         <td>07</td>
+                         <td>09</td>
+                         <td>11</td>
+                         <td>13</td>
+                         <td>15</td>
+                         <td>17</td>
+                         <td class="none">B</td>
+                      </tr>
+                     
+                     <tr>
+                         <td class="none">C</td>
+                         <td>18</td>
+                         <td>16</td>
+                         <td>14</td>
+                         <td>12</td>
+                         <td>10</td>
+                         <td>08</td>
+                         <td>06</td>
+                         <td>04</td>
+                         <td>02</td>
+                         <td style="border:none" class="none"></td>
+                         <td>01</td>
+                         <td>03</td>
+                         <td>05</td>
+                         <td>07</td>
+                         <td>09</td>
+                         <td>11</td>
+                         <td>13</td>
+                         <td>15</td>
+                         <td>17</td>
+                         <td class="none">C</td>
+                      </tr>
+                     
+                     <tr>
+                         <td class="none">D</td>
+                         <td>18</td>
+                         <td>16</td>
+                         <td>14</td>
+                         <td>12</td>
+                         <td>10</td>
+                         <td>08</td>
+                         <td>06</td>
+                         <td style="border:none" class="none"></td>
+                         <td style="border:none" class="none"></td>
+                         <td style="border:none" class="none"></td>
+                         <td style="border:none" class="none"></td>
+                         <td style="border:none" class="none"></td>
+                         <td style="border:none" class="none"></td>
+                         <td style="border:none" class="none"></td>
+                         <td style="border:none" class="none"></td>
+                         <td style="border:none" class="none"></td>
+                         <td style="border:none" class="none"></td>
+                         <td style="border:none" class="none"></td>
+                         <td style="border:none" class="none"></td>
+                         <td class="none">D</td>
+                      </tr>
+                     
+                     <tr>
+                         <td class="none">E</td>
+                         <td>18</td>
+                         <td>16</td>
+                         <td>14</td>
+                         <td>12</td>
+                         <td>10</td>
+                         <td>08</td>
+                         <td>06</td>
+                         <td>04</td>
+                         <td>02</td>
+                         <td style="border:none" class="none"></td>
+                         <td>01</td>
+                         <td>03</td>
+                         <td>05</td>
+                         <td>07</td>
+                         <td>09</td>
+                         <td>11</td>
+                         <td>13</td>
+                         <td>15</td>
+                         <td>17</td>
+                         <td class="none">E</td>
+                      </tr>
+                     
+                     <tr>
+                         <td class="none">F</td>
+                         <td>18</td>
+                         <td>16</td>
+                         <td>14</td>
+                         <td>12</td>
+                         <td>10</td>
+                         <td>08</td>
+                         <td>06</td>
+                         <td>04</td>
+                         <td>02</td>
+                         <td style="border:none" class="none"></td>
+                         <td>01</td>
+                         <td>03</td>
+                         <td>05</td>
+                         <td>07</td>
+                         <td>09</td>
+                         <td>11</td>
+                         <td>13</td>
+                         <td>15</td>
+                         <td>17</td>
+                         <td class="none">F</td>
+                      </tr>
+                     
+                     <tr>
+                         <td class="none">G</td>
+                         <td>18</td>
+                         <td>16</td>
+                         <td>14</td>
+                         <td>12</td>
+                         <td>10</td>
+                         <td>08</td>
+                         <td>06</td>
+                         <td>04</td>
+                         <td>02</td>
+                         <td style="border:none" class="none"></td>
+                         <td>01</td>
+                         <td>03</td>
+                         <td>05</td>
+                         <td>07</td>
+                         <td>09</td>
+                         <td>11</td>
+                         <td>13</td>
+                         <td>15</td>
+                         <td>17</td>
+                         <td class="none">G</td>
+                      </tr>
+                     
+                     <tr>
+                         <td class="none">H</td>
+                         <td>18</td>
+                         <td>16</td>
+                         <td>14</td>
+                         <td>12</td>
+                         <td>10</td>
+                         <td>08</td>
+                         <td>06</td>
+                         <td>04</td>
+                         <td>02</td>
+                         <td style="border:none" class="none"></td>
+                         <td>01</td>
+                         <td>03</td>
+                         <td>05</td>
+                         <td>07</td>
+                         <td>09</td>
+                         <td>11</td>
+                         <td>13</td>
+                         <td>15</td>
+                         <td>17</td>
+                         <td class="none">H</td>
+                      </tr>
+                     
+                     <tr>
+                         <td class="none">I</td>
+                         <td>18</td>
+                         <td>16</td>
+                         <td>14</td>
+                         <td>12</td>
+                         <td>10</td>
+                         <td>08</td>
+                         <td>06</td>
+                         <td>04</td>
+                         <td>02</td>
+                         <td style="border:none" class="none"></td>
+                         <td>01</td>
+                         <td>03</td>
+                         <td>05</td>
+                         <td>07</td>
+                         <td>09</td>
+                         <td>11</td>
+                         <td>13</td>
+                         <td>15</td>
+                         <td>17</td>
+                         <td class="none">I</td>
+                      </tr>
+                     
+                     <tr>
+                         <td class="none">J</td>
+                         <td>18</td>
+                         <td>16</td>
+                         <td>14</td>
+                         <td>12</td>
+                         <td>10</td>
+                         <td>08</td>
+                         <td>06</td>
+                         <td>04</td>
+                         <td>02</td>
+                         <td>01</td>
+                         <td>03</td>
+                         <td>05</td>
+                         <td>07</td>
+                         <td>09</td>
+                         <td>11</td>
+                         <td>13</td>
+                         <td>15</td>
+                         <td>17</td>
+                         <td>19</td>
+                         <td class="none">J</td>
+                      </tr>
+                     
+                     
+                 </table>
+             </div>
+             <br>
+             <br>
+             <br>
+             <br>
+                     <div class="b1">
+                         <a href="#!/regestration"><button class="btn1">Next</button></a>
+                     </div>
+         </div>
+         
+         <script src="js/bootstrap.min.js"></script>
+         <script src="jquery/jquery-3.2.1.js"></script>
+         <script src="angular/angular.min.js"></script>
+         <script src="angular/angular-route.js"></script>
+         <script src="jquery/plugins.js"></script>
+         <script src="angular/ang.js"></script>
+    </body>
+</html>

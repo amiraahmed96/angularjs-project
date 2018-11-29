@@ -1,0 +1,462 @@
+<html ng-app="starApp">
+     <head>
+          <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+          <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+          <link href="style/style.css" rel="stylesheet" type="text/css">
+     </head>
+     <body>
+         
+<div class="discription">
+    
+                     <div class="row">
+                         <div class="col-md-4 col-sm-6 col-xm-12">
+                             <img ng-src="{{myfilms.imgsrc}}" class="img-responsive" width="100%" style="border:2px solid white">
+                         </div>
+                         <div class="col-md-8 col-sm-6 col-xm-12">
+                             <div class="row">
+                                 <div class="col-md-3 col-sm-5 col-xm-4">
+                                     <h3><strong>name</strong></h3>  
+                                 </div>
+                                 <div class="col-md-8 col-sm-7 col-xm-8">
+                                     <br>
+                                     <h4>{{myfilms.name}}</h4>
+                                 </div>
+                             </div>
+                             
+                             <div class="row">
+                                 <div class="col-md-3 col-sm-5 col-xm-4">
+                                     <h3><strong>Delay</strong></h3> 
+                                 </div>
+                                 <div class="col-md-8 col-sm-7 col-xm-8">
+                                     <br>
+                                     <h4><i class="fa fa-clock-o"></i> {{myfilms.delay}}</h4>
+                                 </div>
+                             </div>
+                             
+                             <div class="row">
+                                 <div class="col-md-3 col-sm-5 col-xm-4">
+                                      <h3><strong>Actors</strong></h3> 
+                                 </div>
+                                 <div class="col-md-8 col-sm-7 col-xm-8">
+                                     <br>
+                                     <h4>{{myfilms.actor}}</h4>
+                                 </div>
+                             </div>
+                             
+                             
+                             <div class="row">
+                                 <div class="col-md-3 col-sm-5 col-xm-4">
+                                     <h3><strong>Director</strong></h3> 
+                                 </div>
+                                 <div class="col-md-8 col-sm-7 col-xm-8">
+                                     <br>
+                                     <h4>{{myfilms.director}}</h4>
+                                 </div>
+                             </div>
+                             
+                             <div class="row">
+                                 <div class="col-md-3 col-sm-5 col-xm-4">
+                                     <h3><strong>Category</strong></h3> 
+                                 </div>
+                                 <div class="col-md-8 col-sm-7 col-xm-8">
+                                     <br>
+                                     <h4>{{myfilms.type}}</h4>
+                                 </div>
+                             </div>
+                             
+                            
+                             <div class="row">
+                                 <div class="col-md-3 col-sm-5 col-xm-4">
+                                     <h3><strong>Rating</strong></h3> 
+                                 </div>
+                                 <div class="col-md-8 col-sm-7 col-xm-8">
+                                     
+                                     <h4>
+                                  <div ng-controller="StarCtrl">
+                                    <ul class="rating">
+                                        <li ng-repeat="n in [].constructor(maxRating) track by $index">
+                                            <span ng-click="rateBy($index+1)" ng-show="ratedBy > $index" class="filled" style="color:#6c207e">&#9733;</span>
+                                            <span ng-click="rateBy($index+1)" ng-show="ratedBy <= $index">&#9733;</span>
+                                        </li>
+                                     </ul>
+                                    </div>
+                                  </h4>
+                                 </div>
+                             </div>
+                            
+                             
+                             
+                             
+                         </div>
+                     </div>
+                     <br>
+                     <br>
+                     <div class="plot">
+                         <h2>THE PLOT</h2>
+                         <p class="lead">
+                            {{myfilms.plot}}
+                         </p>
+                     </div>
+                     
+                 </div>
+         
+         
+         <!--start times -->
+         <div class="times">
+            <h2>LOCATION :</h2>
+             <h3>Point 90 Cinema<span><i class="fa fa-sort-down"></i></span></h3>
+             <div class="drop" style="display:block">
+        
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>Saturday</h4>
+                     </div>
+                     <div class="col-md-8">
+                         <h5>{{myfilms.sat}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>sunday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.sun}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>monday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.mon}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>tuesday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.tus}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>wednesday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.win}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>thyrsday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.thr}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>friday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.fri}}</h5>
+                     </div>
+                 </div>
+                 
+                 <a href="#!/gravity/{{myfilms.id}}/select"><button><h2><strong><i class="fa fa-ticket"></i></strong> tickets</h2></button></a>
+             </div>
+             <h3>City Center Cinema<span><i class="fa fa-sort-down"></i></span></h3>
+             <div class="drop">
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>Saturday</h4>
+                     </div>
+                     <div class="col-md-8">
+                         <h5>{{myfilms.sat1}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>sunday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.sun1}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>monday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.mon1}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>tuesday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.tus1}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>wednesday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.win1}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>thyrsday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.thr1}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>friday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.fri1}}</h5>
+                     </div>
+                 </div>
+                 
+                 <a href="#!/gravity/{{myfilms.id}}/select1"><button><h2><strong><i class="fa fa-ticket"></i></strong> tickets</h2></button></a>
+             </div>
+             <h3>Hilton Ramses Cinema<span><i class="fa fa-sort-down"></i></span></h3>
+             <div class="drop">
+             
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>Saturday</h4>
+                     </div>
+                     <div class="col-md-8">
+                         <h5>{{myfilms.sat2}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>sunday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.sun2}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>monday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.mon2}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>tuesday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.tus2}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>wednesday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.win2}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>thyrsday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.thr2}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>friday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.fri2}}</h5>
+                     </div>
+                 </div>
+                 
+                 <a href="#!/gravity/{{myfilms.id}}/select2"><button><h2><strong><i class="fa fa-ticket"></i></strong> tickets</h2></button></a>
+                 
+             </div>
+             <h3>Dandy Mall Cinema<span><i class="fa fa-sort-down"></i></span></h3>
+             <div class="drop">
+             
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>Saturday</h4>
+                     </div>
+                     <div class="col-md-8">
+                         <h5>{{myfilms.sat3}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>sunday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.sun3}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>monday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.mon3}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>tuesday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.tus3}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>wednesday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.win3}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>thyrsday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.thr3}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>friday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.fri3}}</h5>
+                     </div>
+                 </div>
+                 
+                 <a href="#!/gravity/{{myfilms.id}}/select3"><button><h2><strong><i class="fa fa-ticket"></i></strong> tickets</h2></button></a>
+                 
+             </div>
+             <h3> Cairo Mall Cinema<span><i class="fa fa-sort-down"></i></span></h3>
+             <div class="drop">
+                
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>Saturday</h4>
+                     </div>
+                     <div class="col-md-8">
+                         <h5>{{myfilms.sat4}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>sunday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.sun4}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>monday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.mon4}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>tuesday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.tus4}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>wednesday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.win4}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>thyrsday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.thr4}}</h5>
+                     </div>
+                 </div>
+                 
+                 <div class="row">
+                     <div class="col-md-2">
+                         <h4>friday</h4>
+                     </div>
+                     <div class="col-md-9">
+                         <h5>{{myfilms.fri4}}</h5>
+                     </div>
+                 </div>
+                 
+                 <a href="#!/gravity/{{myfilms.id}}/select4"><button><h2><strong><i class="fa fa-ticket"></i></strong> tickets</h2></button></a>
+             
+             </div>
+             
+         
+         </div>
+         
+         <script src="js/bootstrap.min.js"></script>
+         <script src="jquery/jquery-3.2.1.js"></script>
+         <script src="angular/angular.min.js"></script>
+         <script src="angular/angular-route.js"></script>
+         <script src="jquery/plugins.js"></script>
+         <script src="angular/ang.js"></script>
+         
+    </body>
+</html>
+                 

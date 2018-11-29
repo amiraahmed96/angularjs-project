@@ -1,0 +1,89 @@
+<html ng-app="starApp">
+     <head>
+          <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+          <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+          <link href="style/style.css" rel="stylesheet" type="text/css">
+     </head>
+     <body>
+                 <div class="sec2">
+                 <div class="row">
+                     <div class="col-md-12 col-sm-12 col-xm-12">
+                         
+                    <!--start slider-->
+                    <div class="slider">
+                        <img src="img/slide1.jpg" id="slider">
+                    </div>
+                    <!--end slider-->
+                     </div>
+                 </div>
+                 </div>
+                
+                 <!--************************************************-->
+                 <div class="todayfilm">
+                     <center>
+                         <h4 class="n1">CHECK ALL MOVES NOW PLAYING</h4>
+                         <h4><i class="fa fa-chevron-down"></i></h4>
+                     </center>
+                 </div>
+                 
+                 
+                      <!--***********************************-->
+                      <div class="now">
+                      <div class="form-group search">
+                          <h3>Search by type : </h3><input type="search" class="form-control" ng-model="searching.type" placeholder="enter type of film..">
+                     </div>
+                 
+                 
+                
+                     <center>
+                     <h4>
+                         <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i>
+                         <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i>
+                         <span>NOW IN THE CINEMA </span>
+                         <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i>
+                         <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i>
+                     </h4>
+                     </center>
+                     
+                     
+                     <div class="row">
+                         
+                         <div ng-repeat="n in fim | filter:searching">
+                            
+                         <div class="col-md-3 col-sm-6 col-xm-12">
+                             
+                             <div class="dis1">
+                             <a href="#!/gravity/{{n.id}}" style="text-decoration:none"><img ng-src="{{n.imgsrc}}" class="img-responsive">
+                                  <div class="dis" style="background-color:#806088">
+                                 <h4><strong>{{n.name}}</strong></h4>
+                                 <p><i class="fa fa-clock-o"></i> {{n.delay}}</p>
+                                 <p>{{n.type}}</p>
+                                 <div ng-controller="StarCtrl">
+                                    <ul class="rating">
+                                        <li ng-repeat="n in [].constructor(maxRating) track by $index">
+                                            <span ng-click="rateBy($index+1)" ng-show="ratedBy > $index" class="filled">&#9733;</span>
+                                            <span ng-click="rateBy($index+1)" ng-show="ratedBy <= $index">&#9733;</span>
+                                        </li>
+                                    </ul>
+                              </div>
+                             </div>  
+                             </a>
+                             </div>
+                             
+                         </div>
+                         </div>
+                        
+                     </div>
+                     
+                     
+                 </div>
+
+
+        <script src="js/bootstrap.min.js"></script>
+        <script src="jquery/jquery-3.2.1.js"></script>
+         <script src="angular/angular.min.js"></script>
+         <script src="angular/angular-route.js"></script>
+         <script src="jquery/plugins.js"></script>
+         <script src="angular/ang.js"></script>
+    </body>
+</html>
